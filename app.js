@@ -18,14 +18,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-
 if (process.env.NODE_ENV !== "PRODUCTION") {
   dotenv.config({ path: "./config/config.env" });
 }
-
 app.use(
   cors({
-    origin: "https://ecommerce-frontend-eight-pearl.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
